@@ -46,7 +46,8 @@ streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_row)
 
 #Enter user's request
-fruit_choice2 = streamlit.text_input('What fruit would you like information about?','Banana')
-streamlit.write('The user entered ', fruit_choice2)
+add_my_fruit = streamlit.text_input('What fruit would you like information about?','Banana')
+streamlit.write('The user entered ', add_my_fruit)
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice2)
+streamlit.write('Thanks for adding', add_my_fruit)
+my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('test from Streamlit')")
