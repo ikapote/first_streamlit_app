@@ -66,8 +66,8 @@ def insert_row_snowflake(new_fruit):
 add_my_fruit = streamlit.text_input('What fruit would you like information about?')
 streamlit.write('The user entered ', add_my_fruit)
 
-  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-  my_data_rows = insert_row_snowflake(add_my_fruit)
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_data_rows = insert_row_snowflake(add_my_fruit)
 
 #Don't run past this line while we troubleshoot
 streamlit.stop()
