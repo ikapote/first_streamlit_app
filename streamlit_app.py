@@ -73,6 +73,7 @@ def insert_row_snowflake(new_fruit):
   my_cnx.close()
   streamlit.dataframe(my_data_rows1)
 
+
 #Don't run past this line while we troubleshoot
 streamlit.stop()
 
